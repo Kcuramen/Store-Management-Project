@@ -1,0 +1,33 @@
+//Represents Sport Equipment 
+public class SportEquipment extends SportAndFitness{
+
+  private int numOfEquipment;
+
+  //no-argument Constructor
+   public SportEquipment (){
+     super ("no name", 10.0, false );
+   }
+
+  // parameterized Constructor 
+  public SportEquipment (String name, int numOfEquipment){
+    super("Sport Equipment:" + name, 10.0 + numOfEquipment * 0.2, false);
+    this.numOfEquipment = numOfEquipment;
+  }
+  // Parameterized Constructor 
+  public SportEquipment (String name){
+    super(name, 10.0, false);
+  }
+  //Accessor Method 
+  public int getNumOfEquipment(){
+    return numOfEquipment;
+  }
+  // Mutator Method 
+
+  public void setNumOfEquipment( int numOfEquipment){
+  this.numOfEquipment = numOfEquipment;
+  }
+
+  public String toString(){
+    return super.toString() + "( Number of Equipment)" + numOfEquipment + "\nPrice: $" + getPrice();
+  }
+}
